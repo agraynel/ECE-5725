@@ -1,0 +1,15 @@
+# Lab 1 09/13/2017
+# Yi Chen yc2329
+# Mingda Yang my432
+
+#!/bin/bash
+#
+#
+#
+
+echo "play video &"
+sudo SDL_VIDEODRIVER=fbcon SDL_FBDEV=/dev/fb1 mplayer -vo sdl -framedrop -input file=my_fifo bigbuckbunny320p.mp4 &  #run the video on ras pi screen
+
+echo "Running video contrl" #run the video control program
+python video_control.py
+
