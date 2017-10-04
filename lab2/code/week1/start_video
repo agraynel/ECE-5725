@@ -10,6 +10,8 @@
 echo "play video &"
 sudo SDL_VIDEODRIVER=fbcon SDL_FBDEV=/dev/fb1 mplayer -vo sdl -framedrop -input file=/home/pi/Desktop/Lab1/my_fifo /home/pi/Desktop/Lab1/bigbuckbunny320p.mp4 &  #run the video on ras pi screen
 
-echo "Running video contrl" #run the video control program
-python more_video_control_cb.py
+#echo "Running video contrl" #run the video control program
+#python more_video_control.py
 
+echo "time"
+sudo perf stat -r task-clock,context-switches,cpu-migrations,page-faults,cycles,instructions python more_video_control.py

@@ -3,4 +3,5 @@
 # Mingda Yang my432
 
 import time
-time.sleep(0.2) # sleep
+
+time.sleep(0.2)

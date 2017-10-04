@@ -1,0 +1,10 @@
+# Lab 2 09/18/2017
+# Yi Chen yc2329
+# Mingda Yang my432
+
+#!/bin/bash
+
+echo "hello"
+sudo SDL_VIDEODRIVER=fbcon SDL_FBDEV=/dev/fb1 mplayer -vo sdl -framedrop -input file=/home/pi/Desktop/Lab1/my_fifo /home/pi/Desktop/Lab1/bigbuckbunny320p.mp4 &
+
+python more_video_control_cb.py

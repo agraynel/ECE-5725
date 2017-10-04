@@ -18,15 +18,15 @@ while True:
     time.sleep(0.2)  # Without sleep, no screen output!
     if ( not GPIO.input(17) ):                      # Check whether 17 is pressed, if yes, send cmd echo pause to my_fifo
         cmd = 'echo "pause" > my_fifo'
-		print subprocess.check_output(cmd,shell=True)   # Run the commend with subprocess, first check whether commend is exist  and correct, then if yes return, else raise error flag
+		print subprocess.check_output(cmd,shell=True)   # Run the command with subprocess, first check whether commend is exist  and correct, then if yes return, else raise error flag
     elif( not GPIO.input(22) ):                     # Check whether 22 is pressed, if yes, send cmd echo seek +10s to my_fifo
 		cmd = 'echo "seek 10" > my_fifo'
-		print subprocess.check_output(cmd,shell=True)   # Run the commend with subprocess, first check whether commend is exist  and correct, then if yes return, else raise error flag
+		print subprocess.check_output(cmd,shell=True)   # Run the command with subprocess, first check whether commend is exist  and correct, then if yes return, else raise error flag
     elif( not GPIO.input(23) ):                     # Check whether 23 is pressed, if yes, send cmd echo seek -10s to my_fifo
 		cmd = 'echo "seek -10" > my_fifo'
-		print subprocess.check_output(cmd,shell=True)   # Run the commend with subprocess, first check whether commend is exist  and correct, then if yes return, else raise error flag
+		print subprocess.check_output(cmd,shell=True)   # Run the command with subprocess, first check whether commend is exist  and correct, then if yes return, else raise error flag
     elif( not GPIO.input(27) ):                     # Check whether 27 is pressed, if yes, send cmd echo quit to my_fifo
 		cmd = 'echo "quit" > my_fifo'
-		print subprocess.check_output(cmd,shell=True)   # Run the commend with subprocess, first check whether commend is exist  and correct, then if yes return, else raise error flag
+		print subprocess.check_output(cmd,shell=True)   # Run the command with subprocess, first check whether commend is exist  and correct, then if yes return, else raise error flag
 		break                                           # Then quit the program.
 
